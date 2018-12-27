@@ -1,8 +1,11 @@
-// @flow
 
 import React, {PureComponent} from 'react';
 import {Router, Route, Switch} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
+
+import Header from '../components/header';
+import Home from './home';
+import './main.scss';
 
 
 export default class Main extends PureComponent {
@@ -13,10 +16,12 @@ export default class Main extends PureComponent {
     return (
       <Router history={this.history}>
         <React.Fragment>
-          <div>El Baratón</div>
-          <Switch>
-            <Route path="/" component={() => <div>home</div>} />
-          </Switch>
+          <Header />
+          <section className="ctn main-wrapper">
+            <Switch>
+              <Route path="/" component={Home} />
+            </Switch>
+          </section>
         </React.Fragment>
       </Router>
     );

@@ -1,0 +1,39 @@
+
+.main-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 200px;
+  background-color: #1E90FF;
+  padding-top: 48px;
+  
+  &__title {
+    text-align: center;
+
+    a {
+      font-size: 32px;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &__breadcrumbs {
+    margin-top: 8px;
+    color: #b2d2ff;
+    text-align: center;
+    a {
+      color: #b2d2ff;
+      text-decoration: none;
+
+      &:hover {
+        color: #d8e3ff;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:600px) {
+
+}
