@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import './index.css';
-import Store from './common/store';
+import Store from './reducers/store';
 import Main from './modules/main';
 
 class Application extends Component {

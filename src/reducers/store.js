@@ -1,17 +1,17 @@
-// @flow
 
 import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
+import Logger from './logger';
+import * as reducers from '../reducers';
 
-export const Store = (onComplete: Function = () => {}) => {
+export const Store = () => {
 
   const store = createStore(
-    combineReducers([]),
-    applyMiddleware(thunk)
+    combineReducers(reducers),
+    applyMiddleware(thunk, Logger())
   );
 
-  onComplete();
   return store;
 };
 
