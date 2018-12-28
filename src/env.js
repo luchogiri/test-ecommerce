@@ -2,7 +2,13 @@
 
 const ENV = {
 
-  SITE_URL: process.env.BASE
+  SITE_URL: process.env.BASE,
+
+  API: {
+
+    CATEGORIES: '/data/categories.json',
+    PRODUCTS: '/data/products.json',
+  }
 
 };
 

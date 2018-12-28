@@ -16,7 +16,7 @@ input { outline: 0; width: 100%; display: block; }
 /* ----- end reset ---- */
 
 * { font-family: Roboto, sans-serif; font-weight: 400; font-size: 14px; }
-main, section, .flex {  display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-direction: column;  -ms-flex-direction: column;-webkit-box-orient: vertical;  -webkit-box-direction: normal; flex-direction: column; }
+main, section, nav, .flex {  display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-direction: column;  -ms-flex-direction: column;-webkit-box-orient: vertical;  -webkit-box-direction: normal; flex-direction: column; }
 .clear { clear: both; height: 0; display: block }
 .bgimg { background: center no-repeat; background-size: cover; }
 html, body { height: 100vh; color: #444; }
@@ -25,7 +25,8 @@ body > main { min-height: 100vh; background-color: #FAFAFA; }
 
 /* --- mobile first --- */
 .ctn { margin: 0; }
-@media (min-width: 576px) { .ctn { width: 540px; margin: 0 auto; }}
-@media (min-width: 768px) { .ctn { width: 720px; margin: 0 auto; }}
-@media (min-width: 992px) { .ctn { width: 960px; margin: 0 auto; }}
+@media (min-width: 576px) { .ctn { margin: 0 24px; }}
+/*@media (min-width: 576px) { .ctn { width: 540px; margin: 0 auto; }}*/
+/*@media (min-width: 768px) { .ctn { width: 720px; margin: 0 auto; }}*/
+/*@media (min-width: 992px) { .ctn { width: 960px; margin: 0 auto; }}*/
 @media (min-width: 1200px) { .ctn { width: 1140px; margin: 0 auto; }}

@@ -1,0 +1,34 @@
+
+.main-category-item {
+
+  flex: 1;
+  text-decoration: none;
+  height: 88px;
+  background: #eaeaea center no-repeat;
+  background-size: cover;
+  margin: 8px;
+  min-width: 160px;
+
+  @media (min-width: 576px) {
+    height: 152px;
+  }
+
+  h2 {
+    flex: 1;
+    background-color: rgba(0,0,0,0.3);
+    transition: background-color 0.2s;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    @media (min-width:768px) {
+      box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+      font-size: 24px;
+    }
+  }
+}
