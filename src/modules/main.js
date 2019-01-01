@@ -6,8 +6,10 @@ import {connect} from 'react-redux';
 
 import CategoriesActions from '../actions/categories';
 
-import Header from '../components/header';
+import Head from './head';
 import Home from './home';
+import Category from './category';
+
 import './main.scss';
 
 
@@ -23,10 +25,11 @@ class Main extends PureComponent {
     return (
       <Router history={this.history}>
         <React.Fragment>
-          <Header />
+          <Head />
           <section className="ctn main-wrapper">
             <Switch>
-              <Route path="/" component={Home} />
+              <Route path="/" exact component={Home} />
+              <Route path="/:category" exact component={Category} />
             </Switch>
           </section>
         </React.Fragment>

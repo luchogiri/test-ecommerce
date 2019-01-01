@@ -3,14 +3,18 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './header.scss';
 
-const Header = () => (
+const Header = ({ category }) => (
   <header className="main-header">
     <h1 className="main-header__title">
-      <Link to="/">El Baratón</Link>
+      <Link to="/">Test Ecommerce</Link>
     </h1>
     <h3 className="main-header__breadcrumbs">
       <Link to="/">Inicio</Link>
-      {/*<a href="#">Categoría</a> &nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;*/}
+      {category &&
+      <React.Fragment>
+        &nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;
+        <Link to={`/${category.name}-${category.id}`}>{category.name}</Link>
+      </React.Fragment>}
       {/*<a href="#">Subcategoria</a>*/}
     </h3>
   </header>

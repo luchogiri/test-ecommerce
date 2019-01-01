@@ -1,12 +1,18 @@
 
 import React, {PureComponent} from 'react';
+import {connect} from 'react-redux';
 
 import './categories';
 import './home.scss';
 import Categories from "./categories";
+import CategoriesActions from "../actions/categories";
 
 
-export default class Home extends PureComponent {
+class Home extends PureComponent {
+
+  componentDidMount() {
+    this.props.dispatch( CategoriesActions.ResetCategory() );
+  }
 
   render() {
     return (
@@ -18,3 +24,5 @@ export default class Home extends PureComponent {
     );
   }
 }
+
+export default connect()(Home);
