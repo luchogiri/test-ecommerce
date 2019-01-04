@@ -3,8 +3,8 @@ import Services from '../services';
 
 export const Actions = {
 
-  LOADING: 'loading',
-  UPDATE_ITEMS: 'update items',
+  LOADING: 'loading categories',
+  UPDATE_ITEMS: 'update categories',
   SET_CATEGORY: 'set category',
   SET_SUBLEVEL: 'set sublevel',
 };
