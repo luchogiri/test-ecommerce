@@ -11,7 +11,7 @@ import CategoriesActions from "../actions/categories";
 class Home extends PureComponent {
 
   componentDidMount() {
-    this.props.dispatch( CategoriesActions.ResetCategory() );
+    this.props.dispatch( CategoriesActions.ResetSelected() );
   }
 
   render() {

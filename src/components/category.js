@@ -5,9 +5,8 @@ import './category.scss';
 
 const Category = props => {
 
-  const img = props.children ?
-    require(`../images/${String(props.children).toLowerCase()}.jpeg`):
-    '';
+  const img = !props.children ? '':
+    require(`../images/${String(props.children).toLowerCase()}.jpeg`);
 
   return (
     <Link

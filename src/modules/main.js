@@ -9,6 +9,7 @@ import CategoriesActions from '../actions/categories';
 import Head from './head';
 import Home from './home';
 import Category from './category';
+import Sublevel from './sublevel';
 
 import './main.scss';
 
@@ -30,6 +31,8 @@ class Main extends PureComponent {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/:category" exact component={Category} />
+              <Route path="/:category/:sublevel" exact component={Sublevel} />
+              <Route path="/:category/:r(.*)/:sublevel" exact component={Sublevel} />
             </Switch>
           </section>
         </React.Fragment>
