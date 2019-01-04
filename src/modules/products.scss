@@ -1,5 +1,5 @@
 
-.main-categories {
+.main-products {
 
   padding-top: 32px;
 
@@ -12,11 +12,8 @@
   &__list {
     margin: 0 8px 8px;
     padding-bottom: 8px;
+    flex-direction: row;
     overflow-x: scroll;
-
-    @media (min-width: 576px) {
-      flex-direction: row;
-    }
 
     @media (min-width: 768px) {
       flex-wrap: wrap;

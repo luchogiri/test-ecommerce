@@ -20,7 +20,7 @@ main, section, nav, aside, .flex {  display: -webkit-box; display: -moz-box; dis
 .clear { clear: both; height: 0; display: block }
 .bgimg { background: center no-repeat; background-size: cover; }
 html, body { height: 100vh; color: #444; }
-body > main { min-height: 100vh; background-color: #FAFAFA; }
+body > main { min-height: 100vh; background-color: #f5f5f5; }
 
 
 /* --- mobile first --- */

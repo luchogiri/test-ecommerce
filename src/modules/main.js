@@ -5,6 +5,7 @@ import createHistory from 'history/createBrowserHistory';
 import {connect} from 'react-redux';
 
 import CategoriesActions from '../actions/categories';
+import ProductsActions from '../actions/products';
 
 import Head from './head';
 import Home from './home';
@@ -20,6 +21,7 @@ class Main extends PureComponent {
 
   componentDidMount() {
     this.props.dispatch( CategoriesActions.Retrieve() );
+    this.props.dispatch( ProductsActions.Retrieve() );
   }
 
   render() {

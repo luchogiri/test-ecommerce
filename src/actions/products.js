@@ -4,7 +4,7 @@ import Services from '../services';
 export const Actions = {
 
   LOADING: 'loading products',
-  UPDATE_ITEMS: 'update items products'
+  UPDATE_ITEMS: 'update products'
 };
 
 const Products = {

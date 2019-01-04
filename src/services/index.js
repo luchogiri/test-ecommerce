@@ -42,6 +42,8 @@ export default class Services {
   static async GetCategories() {
 
     const data = await Fetch( ENV.API.CATEGORIES );
+    // adds a little network delay ;)
+    await new Promise(r => setTimeout(() => r(), Math.random()*2000));
     return data.categories || [];
   }
 
@@ -49,6 +51,8 @@ export default class Services {
   static async GetProducts() {
 
     const data = await Fetch( ENV.API.PRODUCTS );
+    // adds a little network delay ;)
+    await new Promise(r => setTimeout(() => r(), Math.random()*2000));
     return data.products || [];
   }
 }
