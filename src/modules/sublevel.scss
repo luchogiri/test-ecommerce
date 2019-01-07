@@ -1,35 +1,6 @@
 
-.category-header {
-  height: 160px;
-  background: #ffffff center no-repeat;
-  background-size: cover;
+.category-search {
 
-  &__title {
-    flex: 1;
-    background-color: rgba(0,0,0,0.3);
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 32px;
-  }
-}
-
-
-.category-wrapper {
-
-  flex-direction: row;
-}
-
-
-.category-side {
-
-  flex: 1;
-  margin: 16px 8px 16px 16px;
-}
-
-
-.category-items {
-
-  flex: 4;
-  margin: 16px 16px 16px 8px;
+  margin-top: 32px;
+  padding: 8px;
 }

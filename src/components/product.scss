@@ -10,11 +10,11 @@
   border-radius: 4px;
 
   @media (min-width:768px) {
-    min-width: auto;
-  }
-
-  @media (min-width:928px) {
     min-width: 200px;
+    max-width: 264px;
+  }
+  @media (min-width:1200px) {
+    max-width: 208px;
   }
 
   &:hover {
@@ -77,9 +77,38 @@
     align-items: center;
     justify-content: center;
     transition: color 0.2s;
+    flex-direction: row;
 
     &:hover {
       color: #d660ad;
     }
+  }
+
+  &__add-subtract {
+    height: 40px;
+    border-top: 1px solid #e3e3e3;
+    flex-direction: row;
+
+    & > div {
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      border-left: 1px solid #e3e3e3;
+      border-right: 1px solid #e3e3e3;
+    }
+
+    &__add,
+    &__subtract {
+      cursor: pointer;
+      border: none !important;
+      &:hover {
+        color: #d660ad;
+      }
+    }
+  }
+
+  &--unavailable {
+    background-color: #f0f0f0;
   }
 }

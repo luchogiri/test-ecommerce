@@ -2,16 +2,23 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 
-import './products.scss';
+import CartActions from '../actions/cart';
+
 import Product from '../components/product';
+import './products.scss';
 
 
 
 class Products extends PureComponent {
 
-  showItems = () => {
+  addToCart = i => {
+    this.props.dispatch( CartActions.Add(i) );
+  };
+
+  setItems = () => {
     const {
       filter,
+      subfilter,
       sort,
       quantity,
       items = []
@@ -20,20 +27,13 @@ class Products extends PureComponent {
     let data = items;
     if (filter instanceof Function)
       data = data.filter(filter);
+    if (subfilter instanceof Function)
+      data = data.filter(subfilter);
     if (sort instanceof Function)
       data = data.sort(sort);
     if (quantity)
       data = data.slice(0, quantity);
-
-    return data.map(c =>
-      <Product
-        key={c.id}
-        title={c.name}
-        price={c.price}
-        stock={c.quantity}
-        available={c.available}
-      />
-    )
+    return data;
   };
 
 
@@ -41,20 +41,32 @@ class Products extends PureComponent {
 
     const {
       loading = false,
-      title = ''
+      title = '',
+      home = false
     } = this.props;
 
-    const placeholder = [1,2,3,4];
+    const placeholder = home ? [1,2,3,4,5]:[1,2,3,4];
+    const items = loading ? [] : this.setItems();
 
     return (
       <section className="main-products">
-        <h1 className="main-products__title">{title}</h1>
-        <nav className="main-products__list">
+        <h1 className="main-products__title">{title} {!home && `(${items.length})`}</h1>
+        <section className={`main-products__list ${home ? 'main-products__list--home':''}`}>
           {loading ?
             placeholder.map(c => <Product key={c} />):
-            this.showItems()
+            items.map(i =>
+              <Product
+                key={i.id}
+                id={i.id}
+                title={i.name}
+                price={i.price}
+                stock={i.quantity}
+                available={i.available}
+                onPress={this.addToCart}
+              />
+            )
           }
-        </nav>
+        </section>
       </section>
     );
   }

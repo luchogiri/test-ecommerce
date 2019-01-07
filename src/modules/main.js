@@ -8,7 +8,10 @@ import CategoriesActions from '../actions/categories';
 import ProductsActions from '../actions/products';
 
 import Head from './head';
+import Cart from './cart';
 import Home from './home';
+import Checkout from './checkout';
+import Resume from './resume';
 import Category from './category';
 import Sublevel from './sublevel';
 
@@ -32,11 +35,17 @@ class Main extends PureComponent {
           <section className="ctn main-wrapper">
             <Switch>
               <Route path="/" exact component={Home} />
+              <Route path="/checkout" exact component={Checkout} />
+              <Route path="/resume" exact component={Resume} />
               <Route path="/:category" exact component={Category} />
               <Route path="/:category/:sublevel" exact component={Sublevel} />
               <Route path="/:category/:r(.*)/:sublevel" exact component={Sublevel} />
             </Switch>
           </section>
+
+          <Cart />
+
+          <footer className="main-footer">test e-commerce • made with <span role="img" aria-label="coffee">☕️</span></footer>
         </React.Fragment>
       </Router>
     );

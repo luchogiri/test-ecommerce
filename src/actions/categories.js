@@ -57,6 +57,20 @@ const Categories = {
     return result;
   },
 
+  ListSublevels: (data = {}) => {
+
+    let result = [];
+    if (!Array.isArray(data.sublevels)) return result;
+
+    const iterator = (d = {}) => {
+      result.push(d.id);
+      return Array.isArray(d.sublevels) && d.sublevels.map(iterator);
+    };
+
+    data.sublevels.map(iterator);
+    return result;
+  },
+
   ResetSelected: () => ({ type: Actions.SET_SUBLEVEL })
 };
 

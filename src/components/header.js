@@ -7,7 +7,7 @@ const Header = ({ category, tree = [] }) => (
   <header className="main-header">
 
     <h1 className="main-header__title">
-      <Link to="/">Test Ecommerce</Link>
+      <Link to="/">Test E-Commerce</Link>
     </h1>
 
     <h3 className="main-header__breadcrumbs">

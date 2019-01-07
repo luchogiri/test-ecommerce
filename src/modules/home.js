@@ -25,14 +25,16 @@ class Home extends PureComponent {
           title="Productos en oferta 🔥"
           filter={i => i.available}
           sort={(a,b) => Number(a.price.replace(/[$|,]/g,'')) - Number(b.price.replace(/[$|,]/g,''))}
-          quantity={4}
+          quantity={5}
+          home
         />
 
         <Products
           title="Productos con mucha demanda 😱"
           filter={i => i.available}
           sort={(a,b) => Number(a.quantity - b.quantity)}
-          quantity={4}
+          quantity={5}
+          home
         />
 
       </React.Fragment>
